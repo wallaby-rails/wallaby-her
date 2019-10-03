@@ -2,18 +2,18 @@
 
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'wallaby/core/version'
+require 'wallaby/her/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'wallaby-core'
-  spec.version       = Wallaby::Core::VERSION
+  spec.name          = 'wallaby-her'
+  spec.version       = Wallaby::HerGem::VERSION
   spec.authors       = ['Tian Chen']
   spec.email         = ['me@tian.im']
   spec.license       = 'MIT'
 
-  spec.summary       = %q{The core of Wallaby}
+  spec.summary       = %q{Wallaby's HER ORM adapter}
   spec.description   = spec.summary
-  spec.homepage      = 'https://github.com/wallaby-rails/wallaby-core'
+  spec.homepage      = 'https://github.com/wallaby-rails/wallaby-her'
 
   spec.metadata = {
     'homepage_uri' => spec.homepage,

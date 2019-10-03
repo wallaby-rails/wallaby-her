@@ -1,0 +1,1 @@
+require "wallaby/her/version"
