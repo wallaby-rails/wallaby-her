@@ -1,9 +1,7 @@
-RSpec.describe Wallaby::Her do
-  it "has a version number" do
-    expect(Wallaby::Her::VERSION).not_to be nil
-  end
+require 'rails_helper'
 
-  it "does something useful" do
-    expect(false).to eq(true)
+RSpec.describe Wallaby::Her do
+  it 'has a version number' do
+    expect(Wallaby::HerGem::VERSION).not_to be nil
   end
 end
