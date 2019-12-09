@@ -30,6 +30,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'her'
   spec.add_dependency 'wallaby-core'
 
+  spec.add_development_dependency 'cancancan'
+  spec.add_development_dependency 'pundit'
   spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'wallaby-cop'
 end
