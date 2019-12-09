@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wallaby
   class Her
     # Model service provider for HER ORM
@@ -46,6 +48,7 @@ module Wallaby
       def find(id, _params, _authorizer)
         resource = @model_class.find id
         raise ResourceNotFound, id unless resource
+
         resource
       end
 
@@ -95,6 +98,7 @@ module Wallaby
       # @param resource [Object]
       def ensure_attributes_for(authorizer, action, resource)
         return if authorizer.blank?
+
         restricted_conditions = authorizer.attributes_for action, resource
         resource.assign_attributes restricted_conditions
       end

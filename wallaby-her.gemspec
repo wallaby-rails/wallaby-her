@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-lib = File.expand_path("lib", __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
+
 require 'wallaby/her/version'
 
 Gem::Specification.new do |spec|
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['me@tian.im']
   spec.license       = 'MIT'
 
-  spec.summary       = %q{Wallaby's HER ORM adapter}
+  spec.summary       = "Wallaby's HER ORM adapter"
   spec.description   = spec.summary
   spec.homepage      = 'https://github.com/wallaby-rails/wallaby-her'
 
@@ -22,13 +22,14 @@ Gem::Specification.new do |spec|
   }
 
   spec.files = Dir[
-    '{app,lib}/**/*',
+    'lib/**/*',
     'LICENSE',
     'README.md'
   ]
-  spec.test_files = Dir['spec/**/*']
-  spec.require_paths = ['lib']
 
-  spec.add_dependency 'wallaby-core'
   spec.add_dependency 'her'
+  spec.add_dependency 'wallaby-core'
+
+  spec.add_development_dependency 'rspec-rails'
+  spec.add_development_dependency 'wallaby-cop'
 end

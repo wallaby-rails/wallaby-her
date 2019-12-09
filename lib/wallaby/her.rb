@@ -1,4 +1,8 @@
-require "wallaby/her/version"
+# frozen_string_literal: true
+
+require 'wallaby/core'
+
+require 'wallaby/her/version'
 
 # All files here is for HER ORM
 require 'her'

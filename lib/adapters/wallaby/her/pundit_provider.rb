@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Wallaby
   class Her
     # Pundit provider for Her

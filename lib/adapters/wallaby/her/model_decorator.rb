@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module Wallaby
   class Her
     # Modal decorator for Her
     class ModelDecorator < ::Wallaby::ModelDecorator
       # Generally, in Her, attribute methods are generated with this suffix
-      ATTRIBUTE_SUFFIX = '_will_change!'.freeze
+      ATTRIBUTE_SUFFIX = '_will_change!'
 
       # Origin metadata directly coming from Her.
       #
@@ -93,7 +95,7 @@ module Wallaby
         @general_fields ||=
           her_attributes.each_with_object({}) do |attribute, fields|
             fields[attribute.to_sym] = {
-              type: 'string'.freeze,
+              type: 'string',
               label: @model_class.human_attribute_name(attribute)
             }
           end
